@@ -2,8 +2,8 @@
 from cmath import isnan
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import RandomizedSearchCV
+from sklearn.ensemble import RandomForestRegressor, ExtraTreesRegressor
+from sklearn.model_selection import RandomizedSearchCV,cross_val_score
 from sklearn.neural_network import MLPRegressor
 df = pd.read_csv("df.csv")
 test_sample = pd.read_csv("final_test_df.csv")
@@ -23,4 +23,8 @@ submission = pd.DataFrame({"index" : test_sample.index, "price" : y_pred_rf})
 submission.to_csv('submission.csv', index=False)
 # %%
 pd.DataFrame({"variable":X_train.columns, "importance":rf.feature_importances_}).sort_values("importance", ascending=False)
+# %%
+clf = RandomForestRegressor(max_depth=8)
+CVscore = cross_val_score(clf, X_train, Y_train, cv=5, scoring='neg_mean_squared_error')
+print(np.mean(CVscore))
 # %%

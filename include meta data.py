@@ -75,18 +75,6 @@ ScaleList(list_groups_price)
 df["price_group"] = df.group.cat.rename_categories(list_groups_price)
 # %%
 df.drop(['brand','group','city','language'],axis=1).to_csv('df.csv', index=False)
-# %%
-def TransformTestSample(test_sample):
-    res = test_sample.copy()
-    res["request_number"] = np.NaN
-    res["request_id"] = res["city"] + res["language"] + res["avatar_id"].astype(str)
-    for k in range(1,max(res["order_requests"]) + 1):
-        rq_id = res.loc[res["order_requests"]==k,"request_id"].unique()[0]
-        max_rq = np.nanmax(res.loc[(res.request_id==rq_id) & (res.order_requests<=k),"request_number"])
-        if np.isnan(max_rq):
-            max_rq = 0
-        res.loc[(res.request_id==rq_id) & (res.order_requests==k),"request_number"] = max_rq + 1
-    return(res.drop(['request_id', 'index', 'order_requests','avatar_id'], axis=1))
 # %% AddRequestOrder
 def AddRequestOrder(df, request_order = 1):
     data = df.copy()
