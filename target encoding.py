@@ -42,10 +42,10 @@ def AddRequestOrder(df, request_order = 1):
         data.loc[k,"request_order"] = request_order
         data.loc[k,"avatar_nb_requests"] = avatar_nb_requests
     return data
-# %%
+# %% Test
 test = AddRequestOrder(test_sample)
 
-# %%
+# %% Calc_smooth_mean
 def calc_smooth_mean(df, by, on, m):
     # Compute the global mean
     mean = df[on].mean()
