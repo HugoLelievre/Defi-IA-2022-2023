@@ -1,11 +1,8 @@
 # Defi-IA-2022-2023
 
-Le notebook Requêtes défi IA permet d'effectuer les requêtes qu'on veut et de les ajouter dans le fichier pricing_requests.csv
+All our approach to develop the best possible model to predict the price of hotels is in the file analysis.ipynb
 
-Le fichier python include meta data permet de fusionner le fichier pricing_requests.csv avec les méta données qu'on possède sur les hôtels, grâce à la colonne "hotel_id" présente dans les 2 fichiers.
-
-Ce fichier python enregistre 2 BDD, celle fusionée (merged_df.csv), et la même mais avec uniquement les colonnes qu'on utilise pour l'entraînement (df.csv).
-Le Notebook défi IA ML est celui qu'on utilise pour entraîner et faire des tests sur les modèles.
+The final model we have chosen uses a random forest. We use the quantitative variables date, stock, date_mean and price_mean which respectively correspond to the average date/price of the rows in our database for a given hotel. We also use the city and language variables with one-hot encoding.
 
 # Use of Dockerfile
 
