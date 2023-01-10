@@ -73,9 +73,9 @@ while choice != 1 or choice != 2:
         print("Error on training set : " +str(MSE_rf))
     if choice =="2":
         demo = gr.Interface(fn = predict,
-                                inputs = [gr.Number(0, label="hotel_id (integer between 0 and 999)"),
+                                inputs = [gr.Number(0, label="hotel_id (integer between 0 and 998)"),
                                           gr.Number(0,label ="date (integer between 0 and 44)"),
-                                          gr.Number(0,label ="stock (integer between 0 and 44)"),
+                                          gr.Number(0,label ="stock (integer)"),
                                           gr.Dropdown(['amsterdam', 'copenhagen', 'madrid', 'paris', 'rome', 'sofia', 'valletta', 'vienna','vilnius'], label = 'city'),
                                           gr.Dropdown(['austrian', 'belgian', 'bulgarian', 'croatian', 'cypriot', 'czech', 'danish', 'dutch', 'estonian', 'finnish', 'french', 'german', 'greek', 'hungarian', 'irish', 'italian', 'latvian', 'lithuanian', 'luxembourgish', 'maltese', 'polish', 'portuguese', 'romanian', 'slovakian', 'slovene', 'spanish', 'swedish'], label = "language")],
                                 outputs = "text")
