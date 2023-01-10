@@ -17,9 +17,6 @@ This will build a Docker image from Dockerfile.
 3. `docker run -it "name_of_image":latest`
 It will run your image on a Docker container. `-it` will allow you to enter in Interactive mode and to launch the grad.io app.
 
-4. `python main.py`
-It will run the Python code and give you the link to the gradio.app.
-
 # About all the files
 
 - Dockerfile contains all the informations to build the Docker image
