@@ -15,7 +15,20 @@ This will clone the repository at the desired location on your computer.
 This will build a Docker image from Dockerfile.
 
 3. `docker run -it "name_of_image":latest`
-It will run your image on a Docker container. `-it` will allow you to enter in Interactive mode and to launch the gradio.app.
+It will run your image on a Docker container. `-it` will allow you to enter in Interactive mode and to launch the grad.io app.
 
 4. `python main.py`
 It will run the Python code and give you the link to the gradio.app.
+
+# About all the files
+
+- Dockerfile contains all the informations to build the Docker image
+- Requetes defi IA.ipynb contains the code we used to do the requests on the API
+- analysis.ipynb contains our analysis about the models we tried to use and importances of the various features 
+- feature_hotels.csv contains informations about the hotels
+- main.py contains the code used by the Docker image to run the grad.io app
+- pricins_requests.csv contains all the requests we made from the API
+- rf_model.pickle contains our final model
+- test_set.csv is a test set
+- train.py is the file used to train the Random forest model
+
