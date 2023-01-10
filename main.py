@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split 
 import pickle
 
-filename = "rf_model.pickle"
+filename = "rfmodel.pickle"
 loaded_model = pickle.load(open(filename, "rb"))
 mean_price = pd.read_csv("price_hotel_id.csv", index_col=[0])
 mean_date = pd.read_csv("date_hotel_id.csv", index_col=[0])
