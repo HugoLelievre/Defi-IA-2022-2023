@@ -51,4 +51,5 @@ It will run your image on a Docker container. `-it` will allow you to enter in I
 - test_set.csv is a test set
 - train.py is the file used to train the Random forest model
 - As explained previously, you need to download a trained model from [this Google Drive](https://drive.google.com/file/d/10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW/view?usp=share_link) using the command 3. This file needs to be called `rfmodel.pickle` and to be in the directory containing all the previous files.
+- This README.md file will also be cloned.
 
