@@ -78,6 +78,8 @@ while choice != 1 or choice != 2:
                                           gr.Number(0,label ="stock (integer)"),
                                           gr.Dropdown(['amsterdam', 'copenhagen', 'madrid', 'paris', 'rome', 'sofia', 'valletta', 'vienna','vilnius'], label = 'city'),
                                           gr.Dropdown(['austrian', 'belgian', 'bulgarian', 'croatian', 'cypriot', 'czech', 'danish', 'dutch', 'estonian', 'finnish', 'french', 'german', 'greek', 'hungarian', 'irish', 'italian', 'latvian', 'lithuanian', 'luxembourgish', 'maltese', 'polish', 'portuguese', 'romanian', 'slovakian', 'slovene', 'spanish', 'swedish'], label = "language")],
-                                outputs = "text")
+                                outputs = "text",
+                           title = "Prediction of hotel price - Défi IA 2023",
+                           description="Enter the necessary information to predict the price of a hotel.")
         demo.launch(share=True)
 
