@@ -79,5 +79,5 @@ while choice != 1 or choice != 2:
                                           gr.Dropdown(['amsterdam', 'copenhagen', 'madrid', 'paris', 'rome', 'sofia', 'valletta', 'vienna','vilnius'], label = 'city'),
                                           gr.Dropdown(['austrian', 'belgian', 'bulgarian', 'croatian', 'cypriot', 'czech', 'danish', 'dutch', 'estonian', 'finnish', 'french', 'german', 'greek', 'hungarian', 'irish', 'italian', 'latvian', 'lithuanian', 'luxembourgish', 'maltese', 'polish', 'portuguese', 'romanian', 'slovakian', 'slovene', 'spanish', 'swedish'], label = "language")],
                                 outputs = "text")
-        demo.launch(share=True, server_name="0.0.0.0")
+        demo.launch(share=True)
 
