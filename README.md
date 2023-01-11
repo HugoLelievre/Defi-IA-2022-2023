@@ -17,10 +17,10 @@ This will move you to the directory where files are located locally.
 3. `wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW" -O rfmodel.pickle && rm -rf /tmp/cookies.txt` This will download the file containing the model we trained to directly use the grad.io application and put in in a file called `rfmodel.pickle`.
 Download the model [here](https://drive.google.com/file/d/10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW/view?usp=share_link) in case of issue with the previous command.
 
-4. `docker build -t "name_of_image":latest .`
-This will build a Docker image from Dockerfile.
+4. `docker build -t image_name:latest .`
+This will build a Docker image from Dockerfile. In case of issue with the previous command and if Docker Desktop is installed on your device, launch Docker Desktop.
 
-5. `docker run -it "name_of_image":latest`
+5. `docker run -it image_name:latest`
 It will run your image on a Docker container. `-it` will allow you to enter in Interactive mode and to launch the grad.io app.
 
 6. The, you will have a choice. Typing `1` will train a RandomForestRegressor on the data and return the MSE between the predictions of the model on the test set and the real prices. Typing `2` will launch the grad.io application. The easiest way to use it is to wait for the public URL to appear, and then copy-paste it into your browser to make predictions about hotel prices according to various parameters.
