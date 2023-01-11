@@ -15,6 +15,7 @@ This will clone the repository at the desired location on your computer.
 This will move you to the directory where files are located locally.
 
 3. `wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW" -O rfmodel.pickle && rm -rf /tmp/cookies.txt` This will download the file containing the model we trained to directly use the grad.io application and put in in a file called `rfmodel.pickle`.
+Download the model [here](https://drive.google.com/file/d/10foNNbiUnDcFQ-h-KAkOqnED2JOZ2PWW/view?usp=share_link) in case of issue with the previous command.
 
 4. `docker build -t "name_of_image":latest .`
 This will build a Docker image from Dockerfile.
